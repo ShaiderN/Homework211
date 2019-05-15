@@ -71,11 +71,20 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    public void setmBtnOk(Button mBtnOk) {
+    public void mBtnOk(View view) {
         mBtnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "необходимое сообщение", Toast.LENGTH_LONG).show();
+                if (mBankCardChkBx.isChecked()) {
+                    Toast.makeText(MainActivity.this, mInputMoney.getText() + "р. будут переведены по номеру карты "
+                            + mInputInfo.getText(), Toast.LENGTH_LONG).show();
+                } if (mMobilePhoneChkBx.isChecked()) {
+                    Toast.makeText(MainActivity.this, mInputMoney.getText() + "р. будут переведены по номеру телефона "
+                            + mInputInfo.getText(), Toast.LENGTH_LONG).show();
+                } if (mCashAddressChkBx.isChecked()){
+                    Toast.makeText(MainActivity.this, mInputMoney.getText() + "р. будут переведены по приезде по адресу "
+                            + mInputInfo.getText(), Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

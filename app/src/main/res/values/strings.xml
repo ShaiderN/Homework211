@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Homework211</string>
+    <string name="entMoney">Ввод денег</string>
+    <string name="entInfo">Информация об оплате</string>
+    <string name="btnOk">OK</string>
+    <string name="chkCard">С банковской карты</string>
+    <string name="chkPhone">С мобильного телефона</string>
+    <string name="chkAddress">Наличными по адресу</string>
 </resources>
